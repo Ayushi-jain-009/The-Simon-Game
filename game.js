@@ -5,7 +5,7 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var started=false;
 
 function playSound(name) {
-  var colorPlay = new Audio('sounds/' + name + '.mp3');
+  var colorPlay = new Audio(name + '.mp3');
   colorPlay.play();
 }
 
@@ -67,7 +67,7 @@ if(userClickedPattern[currentLevel]==gamePattern[currentLevel]){
 }
 else{
   // console.log("wrong");
-  var wrongPlay= new Audio('sounds/wrong.mp3');
+  var wrongPlay= new Audio('wrong.mp3');
   wrongPlay.play();
   $("body").addClass("game-over");
   setTimeout(function(){
